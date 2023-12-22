@@ -1,3 +1,48 @@
+
+# Invoice Cashier
+
+Backend used for to create cashier invoices quickly and easily. This application is designed to help small and medium businesses manage their sales transactions.
+
+You can try using `postman` and 
+
+#### 
+[Try Demo this](https://linktodocumentation)
+
+
+
+## Tech Stack
+
+**Database:** MySQL
+
+**Server:** Golang, Gin, Gorm
+
+
+## Design
+
+[Figma](https://linktodocumentation)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/senapahlevi/indonesia-University-API
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Start the server
+
+```bash
+go run main.go
+```
+
+
 ## API
 
 Setting on `.env` for example 8080
@@ -6,17 +51,13 @@ Setting on `.env` for example 8080
 ```bash
   go run main.go
 ```
-
 and will program will Listening and serving HTTP on `:8080`
-
-#### Create Invoice
-
+#### Create Invoice 
 - `POST`
 
 `http://localhost:8080/api/create-invoice`
 
-body json
-
+body json 
 ```bash
 {
     "customer": "budi",
@@ -28,9 +69,7 @@ body json
     "detail_item_json": "[{\"invoice_id\":1, \"item_name\":\"toys\",\"item_type\":\"service\",\"quantity\":10,\"unit_price\":20 },{\"invoice_id\":1, \"item_name\":\"ice cream\",\"item_type\":\"service\",\"quantity\":1,\"unit_price\":690 }]"
 }
 ```
-
 response json:
-
 ```bash
 {
     "data": {
@@ -49,12 +88,9 @@ response json:
     }
 }
 ```
-
-#### Update Invoice
-
+#### Update Invoice  
 - `PUT`
-  `http://localhost:8080/api/update-invoice/43`
-
+`http://localhost:8080/api/update-invoice/43`
 ```bash
 {
     "data": {
@@ -75,9 +111,8 @@ response json:
 ```
 
 #### Detail All Invoice /GET All invoice
-
 - `GET`
-  `http://localhost:8080/api/invoice`
+`http://localhost:8080/api/invoice`
 
 ```bash
 {
@@ -113,20 +148,19 @@ response json:
     ]
 }
 ```
-
-#### Delete Invoice button
-
+#### Delete Invoice button  
 - `DELETE`
-  `http://localhost:8080/api/detail-items/1`
-
-#### Indexing Invoice
-
+`http://localhost:8080/api/detail-items/1`
+ 
+ 
+#### Indexing Invoice 
 `GET`
 
-`http://localhost:8080/api/invoice-indexing?issued_date=2022-10-22&due_date=2023-03-18&status=unpaid`
+`http://localhost:8080/api/invoice-indexing?issued_date=2022-10-22&due_date=2023-03-18&status=unpaid` 
+
+
 
 response json:
-
 ```bash
 {
     "data": [
@@ -166,12 +200,10 @@ response json:
     ]
 }
 ```
-
-#### Detail ID Invoice
+#### Detail ID Invoice  
 
 - `GET`
-  `http://localhost:8080/api/invoice/43`
-
+`http://localhost:8080/api/invoice/43`
 ```bash
 {
     "data": {
@@ -201,4 +233,5 @@ response json:
 }
 ```
 
-- Add more integrations
+
+
