@@ -3,14 +3,11 @@
 
 Backend used for to create cashier invoices quickly and easily. This application is designed to help small and medium businesses manage their sales transactions.
 
-You can try using `postman` and 
-
-#### 
-[Try Demo this](https://linktodocumentation)
-
 
 
 ## Tech Stack
+You can try using `postman` and use demo 
+using these URL `invoice-cashier-crud-production.up.railway.app` 
 
 **Database:** MySQL
 
@@ -19,7 +16,7 @@ You can try using `postman` and
 
 ## Design
 
-[Figma](https://linktodocumentation)
+[Figma](https://www.figma.com/file/K27Xkg85MNvWKrJzXudpxI/Invoice-System-Cashier?type=design&node-id=0%3A1&mode=design&t=HA7D6oRAAQtkTd2b-1)
 
 
 ## Run Locally
@@ -48,6 +45,8 @@ go run main.go
 Setting on `.env` for example 8080
 `PORT=8080`
 
+`URL = http://localhost:8080` OR `invoice-cashier-crud-production.up.railway.app`
+
 ```bash
   go run main.go
 ```
@@ -55,7 +54,7 @@ and will program will Listening and serving HTTP on `:8080`
 #### Create Invoice 
 - `POST`
 
-`http://localhost:8080/api/create-invoice`
+`URL/api/create-invoice`
 
 body json 
 ```bash
@@ -90,7 +89,7 @@ response json:
 ```
 #### Update Invoice  
 - `PUT`
-`http://localhost:8080/api/update-invoice/43`
+`URL/api/update-invoice/43`
 ```bash
 {
     "data": {
@@ -112,7 +111,7 @@ response json:
 
 #### Detail All Invoice /GET All invoice
 - `GET`
-`http://localhost:8080/api/invoice`
+`URL/api/invoice`
 
 ```bash
 {
@@ -150,13 +149,13 @@ response json:
 ```
 #### Delete Invoice button  
 - `DELETE`
-`http://localhost:8080/api/detail-items/1`
+`URL/api/detail-items/1`
  
  
 #### Indexing Invoice 
 `GET`
 
-`http://localhost:8080/api/invoice-indexing?issued_date=2022-10-22&due_date=2023-03-18&status=unpaid` 
+`URL/api/invoice-indexing?issued_date=2022-10-22&due_date=2023-03-18&status=unpaid` 
 
 
 
@@ -203,7 +202,7 @@ response json:
 #### Detail ID Invoice  
 
 - `GET`
-`http://localhost:8080/api/invoice/43`
+`URL/api/invoice/43`
 ```bash
 {
     "data": {
